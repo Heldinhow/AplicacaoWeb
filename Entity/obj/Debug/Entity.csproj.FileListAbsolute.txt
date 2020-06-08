@@ -1,0 +1,11 @@
+C:\Users\heldi\source\repos\WebApp\Entity\bin\Debug\Entity.dll
+C:\Users\heldi\source\repos\WebApp\Entity\bin\Debug\Entity.pdb
+C:\Users\heldi\source\repos\WebApp\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\heldi\source\repos\WebApp\Entity\obj\Debug\Entity.dll
+C:\Users\heldi\source\repos\WebApp\Entity\obj\Debug\Entity.pdb
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\bin\Debug\Entity.dll
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\bin\Debug\Entity.pdb
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\obj\Debug\Entity.dll
+C:\Users\heldi\source\repos\AplicacaoWeb\Entity\obj\Debug\Entity.pdb
