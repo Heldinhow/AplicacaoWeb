@@ -64,6 +64,11 @@
                     var bad_color = "#ff6666";
                     var good_color = "#008000";
                     var login = document.getElementById('login');
+                    if (login.value === "") {
+                        login.style.backgroundColor = null;
+                        message.innerHTML = '';
+                        return;
+                    }
                     $.ajax({
                         type: "POST",
                         dataType: 'JSON',
