@@ -9,26 +9,23 @@
         @using (Html.BeginForm("SignUp", "Login", FormMethod.Post))
 
         {
-            @Html.TextBoxFor(x => x.Login, new { @class = "quantity form-control", @placeholder = "LOGIN", @type = "text", @minlength = 6, @required = "required", @id = "login", @onfocusout = "usuarioDisponivel()" })
+            @Html.TextBoxFor(x => x.Login, new { @class = "quantity form-control", @placeholder = "Login", @type = "text", @minlength = 6, @required = "required", @id = "login", @onfocusout = "usuarioDisponivel()" })
             @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
 
-            @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @placeholder = "SENHA", @type = "password", @minlength = 6, @required = "required", @id = "pass" })
+            @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @placeholder = "Senha", @type = "password", @minlength = 6, @required = "required", @id = "pass" })
             @Html.ValidationMessageFor(m => m.Senha, "", new { @class = "text-danger" })
-            @*<input type="text" name="login" placeholder="Login" required="required" />
-                <input type="password" name="senha" id="pass" placeholder="Senha" required="required" />*@
+
             <input type="password" name="senha2" id="confirm2" onkeyup="checkPass()" placeholder="Confirmação de Senha" required="required" />
-            @Html.TextBoxFor(x => x.Email, new { @class = "quantity form-control", @placeholder = "EMAIL", @type = "email", @minlength = 6, @required = "required" })
+            @Html.TextBoxFor(x => x.Email, new { @class = "quantity form-control", @placeholder = "E-mail", @type = "email", @minlength = 6, @required = "required" })
             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-            @*<input type="email" name="email" placeholder="E-mail" required="required" />*@
             <span id="confirm-message2" class="confirm-message"></span>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Criar Conta</button>
             <div>
-                <p class="text--center">Já tem acesso? <a href="@Url.Action("Login", "Login")">Entrar</a>
+                <p style="color:white" class="text--center">Já tem acesso? <a style="color:cornflowerblue" href="@Url.Action("Login", "Login")">Entrar</a>
             </div>
             <script language="JavaScript" type="text/javascript" src="/Scripts/jquery-3.4.1.min.js"></script>
-            @*<script language="JavaScript" type="text/javascript" src="/Scripts/jquery-ui-personalized-1.5.2.packed.js"></script>
-                <script language="JavaScript" type="text/javascript" src="/Scripts/sprinkle.js"></script>*@
+
             <script>
                 function checkPass() {
                     //Store the password field objects into variables ...

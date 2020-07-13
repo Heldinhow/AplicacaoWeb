@@ -4,3 +4,9 @@ C:\Users\heldi\source\repos\WebApp\Extensions\obj\Debug\Extensions.csprojAssembl
 C:\Users\heldi\source\repos\WebApp\Extensions\obj\Debug\Extensions.csproj.CoreCompileInputs.cache
 C:\Users\heldi\source\repos\WebApp\Extensions\obj\Debug\Extensions.dll
 C:\Users\heldi\source\repos\WebApp\Extensions\obj\Debug\Extensions.pdb
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\bin\Debug\Extensions.dll
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\bin\Debug\Extensions.pdb
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\obj\Debug\Extensions.csprojAssemblyReference.cache
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\obj\Debug\Extensions.csproj.CoreCompileInputs.cache
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\obj\Debug\Extensions.dll
+C:\Users\heldi\Documents\AplicacaoWeb\Extensions\obj\Debug\Extensions.pdb

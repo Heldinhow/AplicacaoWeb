@@ -20,3 +20,14 @@ C:\Users\heldi\source\repos\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.cspro
 C:\Users\heldi\source\repos\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.csproj.CopyComplete
 C:\Users\heldi\source\repos\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.dll
 C:\Users\heldi\source\repos\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.pdb
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\DataObjects.dll
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\DataObjects.pdb
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\Dapper.dll
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\Entity.dll
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\Entity.pdb
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\bin\Debug\Dapper.xml
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.csprojAssemblyReference.cache
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.csproj.CoreCompileInputs.cache
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.csproj.CopyComplete
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.dll
+C:\Users\heldi\Documents\AplicacaoWeb\DataObjects\obj\Debug\DataObjects.pdb

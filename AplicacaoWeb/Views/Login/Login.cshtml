@@ -24,11 +24,11 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
         if (this.Session["ErroMessage"] != null && !string.IsNullOrEmpty(this.Session["ErroMessage"].ToString()))
         {
-            <p style="color:darkred">@this.Session["ErroMessage"].ToString() </p>
+            <p style="color:red">@this.Session["ErroMessage"].ToString() </p>
             this.Session.Remove("ErroMessage");
         }
         <div>
-            <p class="text--center">Ainda não tem acesso? <a href="@Url.Action("SignUp", "Login")">Criar Conta</a>
+            <p style="color:white" class="text--center">Ainda não tem acesso? <a style="color:cornflowerblue" href="@Url.Action("SignUp", "Login")">Criar Conta</a>
         </div>
     }
 </div>
