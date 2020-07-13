@@ -8,19 +8,17 @@
     <h1>Acesso ao Sistema XPTO</h1>
     @using (Html.BeginForm("Logon", "Login", FormMethod.Post))
     {
-        @*<input type="text" name="login" placeholder="Login" required="required" />*@
         <div>
 
-            @Html.TextBoxFor(x => x.Login, new { @class = "quantity form-control", @placeholder = "LOGIN", @type = "text", @minlength = 6, @required = "required" })
+            @Html.TextBoxFor(x => x.Login, new { @class = "quantity form-control", @placeholder = "Login", @type = "text", @minlength = 6, @required = "required" })
             @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
         </div>
         <div>
 
-            @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @placeholder = "SENHA", @type = "password", @minlength = 6, @required = "required" })
+            @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @placeholder = "Senha", @type = "password", @minlength = 6, @required = "required" })
             @Html.ValidationMessageFor(m => m.Senha, "", new { @class = "text-danger" })
         </div>
 
-        @*<input type="password" name="senha" placeholder="Senha" required="required" />*@
         <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
         if (this.Session["ErroMessage"] != null && !string.IsNullOrEmpty(this.Session["ErroMessage"].ToString()))
         {
