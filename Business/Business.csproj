@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="LoginBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetSenhaBusiness.cs" />
+    <Compile Include="TemplateHtmlBusiness.cs" />
     <Compile Include="UsuarioBusiness.cs" />
   </ItemGroup>
   <ItemGroup>

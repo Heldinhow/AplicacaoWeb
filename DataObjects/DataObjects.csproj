@@ -47,6 +47,8 @@
     <Compile Include="ConexaoDao.cs" />
     <Compile Include="LoginDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetSenhaDao.cs" />
+    <Compile Include="TemplateHtmlDao.cs" />
     <Compile Include="UsuarioDao.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,23 @@
+﻿@model AplicacaoWeb.Models.UsuarioModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<title>Reset de Senha</title>
+<div class="login">
+    @using (Html.BeginForm("ResetSenha", "Login", FormMethod.Post))
+    {
+        <h1>Recuperar Senha</h1>
+
+        <link href="~/Content/LoginStyle.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <div>
+            @Html.TextBoxFor(x => x.Email, new { @class = "quantity form-control", @placeholder = "E-mail", @type = "email", @minlength = 6, @required = "required" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Enviar</button>
+        </div>
+    }
+</div>

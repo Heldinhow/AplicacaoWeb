@@ -21,8 +21,8 @@ namespace AplicacaoWeb.Controllers
         [HttpPost]
         public ActionResult Logon(UsuarioModel usuarioModel)
         {
-            
-            var retorno = new UsuarioBusiness().BuscarUsuario(new Usuario { DS_USUARIO = usuarioModel.Login, DS_SENHA = usuarioModel.Senha});
+
+            var retorno = new UsuarioBusiness().BuscarUsuario(new Usuario { DS_USUARIO = usuarioModel.Login, DS_SENHA = usuarioModel.Senha });
             if (retorno.Valido)
                 return RedirectToAction("Index", "Home");
             else
@@ -60,6 +60,25 @@ namespace AplicacaoWeb.Controllers
         public ActionResult SignUp()
         {
             return View();
+        }
+        [HttpGet]
+        public ActionResult ResetSenha()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ResetSenha(UsuarioModel usuarioModel)
+        {
+            var validaUsuario = new UsuarioBusiness().BuscarUsuario(new Usuario { DS_USUARIO = usuarioModel.Login, DS_SENHA = usuarioModel.Senha });
+
+            if (validaUsuario.Valido)
+            {
+                Usuario user = (Usuario)validaUsuario.Objeto;
+                var reset = new ResetSenhaBusiness().SolicitarReset(new Usuario { ID_USUARIO = user.ID_USUARIO });
+            }
+            else
+                Session["EmailInvalido"] = "Email Inválido!";   
+            return Json(validaUsuario.Valido);
         }
     }
 }

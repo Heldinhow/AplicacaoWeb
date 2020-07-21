@@ -19,7 +19,7 @@ namespace DataObjects
             {
                 retorno = db.Query<int>("PRC_NOVO_USUARIO @DS_USUARIO, @DS_SENHA, @DS_EMAIL_USUARIO", usuario).FirstOrDefault();
             }
-            if (retorno > 0)
+            if (retorno == 0)
 
                 return true;
             else
@@ -29,7 +29,7 @@ namespace DataObjects
         {
             using (var db = base.Conexao)
             {
-                return db.Query<Usuario>("PRC_BUSCAR_USUARIO @DS_USUARIO, @DS_SENHA", usuario).FirstOrDefault();
+                return db.Query<Usuario>("PRC_BUSCAR_USUARIO @DS_USUARIO, @DS_SENHA, @DS_EMAIL_USUARIO", usuario).FirstOrDefault();
             }
         }
         public bool UsuarioValido(Usuario usuario)
