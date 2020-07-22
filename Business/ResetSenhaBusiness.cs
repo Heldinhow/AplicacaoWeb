@@ -21,7 +21,7 @@ namespace Business
                 var retorno = new ResetSenhaDao().SolicitarReset(usuario);
                 if (retorno != null)
                 {
-                    SendMail(retorno);
+                    new EmailBusiness().EnviarEmail(retorno);
                     return Retorno.RetornoSucesso(retorno);
                 }
                 else
@@ -34,22 +34,6 @@ namespace Business
             }
 
         }
-        public Retorno SendMail(Usuario usuario)
-        {
-            var template = (Template) new TemplateHtmlBusiness().BuscarTemplate().Objeto;
 
-            string text = template.HTML_TEMPLATE.Replace("[USUARIO]", usuario.DS_USUARIO);
-
-            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
-            {
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("naoresponsaxpto@gmail.com", "hahadown123"),
-                EnableSsl = true
-            })
-            {
-                client.Send("naoresponsaxpto@gmail.com", usuario.DS_EMAIL_USUARIO, "Recuperação de Senha", text);
-            }
-            return Retorno.RetornoSucesso(usuario);
-        }
     }
 }
