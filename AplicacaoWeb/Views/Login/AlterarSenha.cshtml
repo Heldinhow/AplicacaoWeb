@@ -1,0 +1,25 @@
+﻿@model AplicacaoWeb.Models.UsuarioModel
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<title>Alterar Senha</title>
+<div class="login">
+    @using (Html.BeginForm("AlterarSenha", "Login", FormMethod.Post))
+    {
+        <h1>Alterar Senha</h1>
+        @Html.HiddenFor(x => x.Id)
+        <link href="~/Content/LoginStyle.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <div>
+            @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", @placeholder = "Senha", @type = "password", @minlength = 6, @required = "required", @id = "pass" })
+            @Html.ValidationMessageFor(m => m.Senha, "", new { @class = "text-danger" })
+
+            <input type="password" name="senha2" id="confirm2" onkeyup="checkPass()" placeholder="Confirmação de Senha" required="required" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Enviar</button>
+        </div>
+    }
+</div>

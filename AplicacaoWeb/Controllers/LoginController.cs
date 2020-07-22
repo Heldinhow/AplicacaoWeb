@@ -77,8 +77,36 @@ namespace AplicacaoWeb.Controllers
                 var reset = new ResetSenhaBusiness().SolicitarReset(new Usuario { ID_USUARIO = user.ID_USUARIO });
             }
             else
-                Session["EmailInvalido"] = "Email Inválido!";   
+                Session["EmailInvalido"] = "Email Inválido!";
             return Json(validaUsuario.Valido);
+        }
+        [HttpGet]
+        public ActionResult AlterarSenha(string codigo)
+        {
+            if (codigo != null)
+            {
+                var retorno = new ResetSenhaBusiness().ValidarCodigo(codigo);
+                if (retorno.Valido)
+                {
+                    var usuario = (Usuario)retorno.Objeto;
+                    return View(new UsuarioModel { Id = usuario.ID_USUARIO});
+                }
+                else
+                    return View("Error");
+            }
+            else
+                return View("Error");
+
+        }
+        [HttpPost]
+        public ActionResult AlterarSenha(UsuarioModel usuario)
+        {
+            var retorno = new ResetSenhaBusiness().AlterarSenha(new Usuario { DS_SENHA = usuario.Senha, ID_USUARIO = usuario.Id});
+            if (retorno.Valido)
+            {
+                return View("Login");
+            }
+            return View();
         }
     }
 }

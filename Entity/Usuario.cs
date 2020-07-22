@@ -14,5 +14,7 @@ namespace Entity
         public string DS_EMAIL_USUARIO { get; set; }
         public DateTime DT_INCLUSAO { get; set; }
         public int TIPO_PERFIL { get; set; }
+        //NÃO NECESSÁRIO
+        public string DS_GUID { get; set; }
     }
 }

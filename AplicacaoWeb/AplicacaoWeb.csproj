@@ -169,6 +169,7 @@
     <Content Include="Views\Login\SignUp.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Login\ResetSenha.cshtml" />
+    <Content Include="Views\Login\AlterarSenha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

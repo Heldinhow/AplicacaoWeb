@@ -34,6 +34,34 @@ namespace Business
             }
 
         }
+        public Retorno ValidarCodigo(string codigo)
+        {
+            try
+            {
+                var retorno = new ResetSenhaDao().ValidarCodigo(codigo);
+
+                return (retorno != null ? Retorno.RetornoSucesso(retorno) : Retorno.RetornoErroTratado(new List<string> { "Código Inválido." }, false));
+            }
+            catch (Exception ex)
+            {
+                return Retorno.RetornoErroException(ex);
+
+            }
+        }
+        public Retorno AlterarSenha(Usuario usuario)
+        {
+            try
+            {
+                var retorno = new ResetSenhaDao().AlterarSenha(usuario);
+
+                return (retorno ? Retorno.RetornoSucesso(retorno) : Retorno.RetornoErroTratado(new List<string> { "Falha ao alterar a senha." }, false));
+            }
+            catch (Exception ex)
+            {
+                return Retorno.RetornoErroException(ex);
+
+            }
+        }
 
     }
 }
