@@ -69,16 +69,17 @@ namespace AplicacaoWeb.Controllers
         [HttpPost]
         public ActionResult ResetSenha(UsuarioModel usuarioModel)
         {
-            var validaUsuario = new UsuarioBusiness().BuscarUsuario(new Usuario { DS_USUARIO = usuarioModel.Login, DS_SENHA = usuarioModel.Senha });
-
+            var validaUsuario = new UsuarioBusiness().BuscarUsuario(new Usuario { DS_EMAIL_USUARIO = usuarioModel.Email});
+            Usuario user = new Usuario();
             if (validaUsuario.Valido)
             {
-                Usuario user = (Usuario)validaUsuario.Objeto;
+                 user = (Usuario)validaUsuario.Objeto;
                 var reset = new ResetSenhaBusiness().SolicitarReset(new Usuario { ID_USUARIO = user.ID_USUARIO });
+                Session["ResetSolicitado"] = "Email Enviado!";
             }
             else
                 Session["EmailInvalido"] = "Email Inválido!";
-            return Json(validaUsuario.Valido);
+            return View("Login", new UsuarioModel { Id = user.ID_USUARIO});
         }
         [HttpGet]
         public ActionResult AlterarSenha(string codigo)
